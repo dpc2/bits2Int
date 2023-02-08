@@ -17,14 +17,35 @@ for i in range(0, bits):
     unsignedTotal = x + unsignedTotal
 
 
-print("\nThe largest number we can represent with a signed ", end='')
-print(bits, end='')
-print(" bit integer is:")
+print("\nThe largest number we can represent with a signed " + str(bits) + " bit integer is:")
 print(signedTotal)
-print("")
+print()
 
-print("The largest number we can represent with an unsigned ", end='')
-print(bits, end='')
-print(" bit integer is:")
+print("The largest number we can represent with an unsigned " + str(bits) + " bit integer is:")
 print(unsignedTotal)
+print()
 
+
+
+counter = bits - 1
+string1 = ''
+
+while counter >= 0:
+	string1 += '2^' + str(counter)
+	if counter != 0:
+		string1 += ' + '
+	counter -= 1
+
+print(string1)
+
+
+counter = bits - 1
+string2 = ''
+
+while counter >= 0:
+        string2 += str(2 ** counter)
+        if counter != 0:
+                string2 += ' + '
+        counter -= 1
+
+print(string2)
